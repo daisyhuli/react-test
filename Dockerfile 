@@ -1,7 +1,7 @@
-From node
+From nginx
 
-ENV PROJECT_ENV production
-ENV NODE_ENV production
+#ENV PROJECT_ENV production
+#ENV NODE_ENV production
 
 COPY ./build /usr/share/nginx/html
 #WORKDIR /app
@@ -13,3 +13,4 @@ COPY ./build /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/conf.d/com.react.conf
 #COPY --from=build-app /app/dist /usr/share/nginx/html
 CMD ["nginx","-g","daemon off;"]
+
